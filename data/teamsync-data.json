@@ -1,0 +1,2476 @@
+{
+  "skills": [
+    {
+      "id": "sk-react",
+      "name": "React",
+      "category": "Frontend",
+      "description": "Modern React with hooks and state management"
+    },
+    {
+      "id": "sk-nextjs",
+      "name": "Next.js",
+      "category": "Frontend",
+      "description": "Next.js App Router, SSR, and API routes"
+    },
+    {
+      "id": "sk-nodejs",
+      "name": "Node.js",
+      "category": "Backend",
+      "description": "Server-side JavaScript and RESTful APIs"
+    },
+    {
+      "id": "sk-python",
+      "name": "Python",
+      "category": "AI/ML",
+      "description": "Python for backend, analytics, and machine learning"
+    },
+    {
+      "id": "sk-fastapi",
+      "name": "FastAPI",
+      "category": "Backend",
+      "description": "High performance async Python web APIs"
+    },
+    {
+      "id": "sk-pytorch",
+      "name": "PyTorch",
+      "category": "AI/ML",
+      "description": "Deep learning neural network modeling and training"
+    },
+    {
+      "id": "sk-postgres",
+      "name": "PostgreSQL",
+      "category": "Database",
+      "description": "Relational schema design, indexing, and queries"
+    },
+    {
+      "id": "sk-docker",
+      "name": "Docker",
+      "category": "DevOps",
+      "description": "Containerization, Docker Compose, and image builds"
+    },
+    {
+      "id": "sk-figma",
+      "name": "Figma",
+      "category": "Design",
+      "description": "UI/UX wireframing, design systems, and prototyping"
+    },
+    {
+      "id": "sk-tailwind",
+      "name": "Tailwind CSS",
+      "category": "Frontend",
+      "description": "Utility-first modern styling and responsive design"
+    },
+    {
+      "id": "sk-graphql",
+      "name": "GraphQL",
+      "category": "Backend",
+      "description": "Query language for APIs and schema stitching"
+    },
+    {
+      "id": "sk-mongodb",
+      "name": "MongoDB",
+      "category": "Database",
+      "description": "Document-oriented NoSQL persistence"
+    },
+    {
+      "id": "sk-kubernetes",
+      "name": "Kubernetes",
+      "category": "DevOps",
+      "description": "Container orchestration, deployments, and services"
+    },
+    {
+      "id": "sk-solidity",
+      "name": "Solidity",
+      "category": "Web3",
+      "description": "Smart contract development and security audits"
+    },
+    {
+      "id": "sk-embedded",
+      "name": "C/C++ Embedded",
+      "category": "IoT",
+      "description": "Microcontroller firmware for ESP32 and Arduino"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-student-1",
+      "email": "alex.chen@university.edu",
+      "name": "Alex Chen",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.011Z"
+    },
+    {
+      "id": "usr-student-2",
+      "email": "sarah.miller@university.edu",
+      "name": "Sarah Miller",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-3",
+      "email": "marcus.vance@university.edu",
+      "name": "Marcus Vance",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-4",
+      "email": "priya.sharma@university.edu",
+      "name": "Priya Sharma",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-5",
+      "email": "david.kim@university.edu",
+      "name": "David Kim",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-6",
+      "email": "elena.rostova@university.edu",
+      "name": "Elena Rostova",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-7",
+      "email": "jordan.taylor@university.edu",
+      "name": "Jordan Taylor",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-8",
+      "email": "maya.patel@university.edu",
+      "name": "Maya Patel",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-9",
+      "email": "lucas.alvarez@university.edu",
+      "name": "Lucas Alvarez",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-10",
+      "email": "chloe.dubois@university.edu",
+      "name": "Chloe Dubois",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-11",
+      "email": "zack.foster@university.edu",
+      "name": "Zack Foster",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-12",
+      "email": "hannah.abbott@university.edu",
+      "name": "Hannah Abbott",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1548142813-c348350df52b?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-13",
+      "email": "kevin.nguyen@university.edu",
+      "name": "Kevin Nguyen",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-14",
+      "email": "olivia.ward@university.edu",
+      "name": "Olivia Ward",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-15",
+      "email": "samuel.green@university.edu",
+      "name": "Samuel Green",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-16",
+      "email": "amara.okafor@university.edu",
+      "name": "Amara Okafor",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-17",
+      "email": "ryan.reynolds.jr@university.edu",
+      "name": "Ryan Bailey",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-18",
+      "email": "fatima.zahra@university.edu",
+      "name": "Fatima Zahra",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-19",
+      "email": "tariq.mansour@university.edu",
+      "name": "Tariq Mansour",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-student-20",
+      "email": "grace.hopper.jr@university.edu",
+      "name": "Grace Lin",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "passwordHash": "$2b$10$tFkC8fUR7KgwGCFvnENOVufDWWkTmoMliBxDvrnbunAsFaiCSbnCC",
+      "createdAt": "2026-10-23T20:58:22.012Z"
+    },
+    {
+      "id": "usr-1792789102029-jizm4",
+      "email": "student_1792789101774@university.edu",
+      "passwordHash": "$2b$10$XlbXUURMuFMy0Oa4Sdct0eEYbOjT6ZFEpiV39FK.JKFGwyzItvF1m",
+      "name": "Test Evaluation Student",
+      "role": "STUDENT",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150",
+      "createdAt": "2026-10-23T20:58:22.029Z"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "prof-usr-student-1",
+      "userId": "usr-student-1",
+      "department": "Computer Science",
+      "academicYear": 4,
+      "interests": [
+        "Web Development",
+        "AI/ML",
+        "Distributed Systems"
+      ],
+      "preferredRoles": [
+        "Project Lead",
+        "Full-Stack Developer"
+      ],
+      "weeklyAvailabilityHours": 20,
+      "learningGoals": "Master production Next.js architecture and team leadership",
+      "currentCommitments": "2 elective courses, 1 lab assignment",
+      "workloadCapacity": 25,
+      "bio": "Final year CS major with a passion for building scalable web platforms and leading collaborative teams.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-2",
+      "userId": "usr-student-2",
+      "department": "Data Science",
+      "academicYear": 3,
+      "interests": [
+        "AI/ML",
+        "Predictive Modeling",
+        "Data Visualization"
+      ],
+      "preferredRoles": [
+        "AI/ML Engineer",
+        "Data Scientist"
+      ],
+      "weeklyAvailabilityHours": 18,
+      "learningGoals": "Deploy PyTorch neural models in real-time web applications",
+      "currentCommitments": "Linear algebra, Capstone project",
+      "workloadCapacity": 20,
+      "bio": "Passionate about machine learning architectures, statistical validation, and explainable models.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-3",
+      "userId": "usr-student-3",
+      "department": "Information Technology",
+      "academicYear": 3,
+      "interests": [
+        "UI/UX Design",
+        "Frontend Development",
+        "Accessibility"
+      ],
+      "preferredRoles": [
+        "UI/UX Designer",
+        "Frontend Lead"
+      ],
+      "weeklyAvailabilityHours": 16,
+      "learningGoals": "Develop micro-interactions and accessible design systems",
+      "currentCommitments": "Database course, Graphic design club officer",
+      "workloadCapacity": 18,
+      "bio": "Creative frontend developer combining aesthetic sensibility with clean responsive code.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-4",
+      "userId": "usr-student-4",
+      "department": "Computer Science",
+      "academicYear": 4,
+      "interests": [
+        "Cloud Infrastructure",
+        "DevOps",
+        "Cybersecurity"
+      ],
+      "preferredRoles": [
+        "DevOps Engineer",
+        "Backend Developer"
+      ],
+      "weeklyAvailabilityHours": 22,
+      "learningGoals": "Build CI/CD automation pipelines and Kubernetes clusters",
+      "currentCommitments": "Senior seminar, Compilers lab",
+      "workloadCapacity": 24,
+      "bio": "Enthusiastic systems engineer focused on secure containerization, infrastructure as code, and fast builds.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-5",
+      "userId": "usr-student-5",
+      "department": "Software Engineering",
+      "academicYear": 2,
+      "interests": [
+        "Web Development",
+        "Testing",
+        "Backend"
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "QA Tester"
+      ],
+      "weeklyAvailabilityHours": 15,
+      "learningGoals": "Learn test-driven development and API optimization",
+      "currentCommitments": "Full-time study (5 courses), math tutor",
+      "workloadCapacity": 15,
+      "bio": "Second year student eager to learn backend patterns, automated testing, and relational modeling.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-6",
+      "userId": "usr-student-6",
+      "department": "Computer Science",
+      "academicYear": 3,
+      "interests": [
+        "AI/ML",
+        "Natural Language Processing",
+        "Data Analytics"
+      ],
+      "preferredRoles": [
+        "Data Scientist",
+        "AI/ML Engineer"
+      ],
+      "weeklyAvailabilityHours": 19,
+      "learningGoals": "Fine-tune transformer models for conversational interfaces",
+      "currentCommitments": "Algorithms, Stats lab",
+      "workloadCapacity": 20,
+      "bio": "Machine learning practitioner specializing in NLP, sentiment analysis, and embedding pipelines.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-7",
+      "userId": "usr-student-7",
+      "department": "Information Technology",
+      "academicYear": 4,
+      "interests": [
+        "FinTech",
+        "Web3",
+        "Blockchain Architecture"
+      ],
+      "preferredRoles": [
+        "Smart Contract Developer",
+        "Backend Developer"
+      ],
+      "weeklyAvailabilityHours": 17,
+      "learningGoals": "Audit smart contracts and integrate decentralized oracles",
+      "currentCommitments": "Senior project, financial economics elective",
+      "workloadCapacity": 18,
+      "bio": "Focused on financial technology, consensus protocols, and secure backend microservices.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-8",
+      "userId": "usr-student-8",
+      "department": "Electrical & Computer Engineering",
+      "academicYear": 4,
+      "interests": [
+        "IoT",
+        "Embedded Systems",
+        "Robotics"
+      ],
+      "preferredRoles": [
+        "Hardware/Firmware Engineer",
+        "IoT Developer"
+      ],
+      "weeklyAvailabilityHours": 20,
+      "learningGoals": "Integrate low-power wireless telemetry with cloud dashboards",
+      "currentCommitments": "Senior design lab, Microprocessors TA",
+      "workloadCapacity": 22,
+      "bio": "Hardware-software co-designer with expertise in ESP32, sensor networks, and MQTT data pipelines.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-9",
+      "userId": "usr-student-9",
+      "department": "Software Engineering",
+      "academicYear": 3,
+      "interests": [
+        "Frontend Development",
+        "Web Development",
+        "Design Systems"
+      ],
+      "preferredRoles": [
+        "Frontend Developer",
+        "UI/UX Designer"
+      ],
+      "weeklyAvailabilityHours": 18,
+      "learningGoals": "Master React state machines and web animations",
+      "currentCommitments": "Software architecture, mobile dev",
+      "workloadCapacity": 20,
+      "bio": "Frontend enthusiast creating intuitive, accessible web interfaces and component libraries.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-10",
+      "userId": "usr-student-10",
+      "department": "Computer Science",
+      "academicYear": 2,
+      "interests": [
+        "Web Development",
+        "Databases",
+        "Cloud"
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "Database Specialist"
+      ],
+      "weeklyAvailabilityHours": 15,
+      "learningGoals": "Learn database indexing, replication, and query optimization",
+      "currentCommitments": "Data structures, Discrete math",
+      "workloadCapacity": 16,
+      "bio": "Disciplined CS sophomore curious about distributed databases, caching strategies, and SQL tuning.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-11",
+      "userId": "usr-student-11",
+      "department": "Data Science",
+      "academicYear": 4,
+      "interests": [
+        "AI/ML",
+        "Computer Vision",
+        "Healthcare AI"
+      ],
+      "preferredRoles": [
+        "AI/ML Engineer",
+        "Research Lead"
+      ],
+      "weeklyAvailabilityHours": 20,
+      "learningGoals": "Deploy medical imaging models with real-time inference on edge devices",
+      "currentCommitments": "Thesis research, Bio-imaging seminar",
+      "workloadCapacity": 22,
+      "bio": "Passionate about applying deep convolutional models to healthcare diagnostics and MRI analysis.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-12",
+      "userId": "usr-student-12",
+      "department": "Information Technology",
+      "academicYear": 3,
+      "interests": [
+        "Full-Stack Development",
+        "API Design",
+        "DevOps"
+      ],
+      "preferredRoles": [
+        "Full-Stack Developer",
+        "Scrum Master"
+      ],
+      "weeklyAvailabilityHours": 17,
+      "learningGoals": "Master GraphQL federation and modern container CI/CD",
+      "currentCommitments": "Web security class, student mentorship",
+      "workloadCapacity": 18,
+      "bio": "Enthusiastic full-stack engineer who loves organizing team milestones and building clean APIs.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-13",
+      "userId": "usr-student-13",
+      "department": "Computer Science",
+      "academicYear": 3,
+      "interests": [
+        "FinTech",
+        "Security",
+        "Backend"
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "Security Auditor"
+      ],
+      "weeklyAvailabilityHours": 18,
+      "learningGoals": "Implement OAuth 2.1, zero-trust tokens, and rate-limiting infrastructure",
+      "currentCommitments": "Operating systems, Network security",
+      "workloadCapacity": 20,
+      "bio": "CS student driven by secure application design, cryptographic protocols, and resilient APIs.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-14",
+      "userId": "usr-student-14",
+      "department": "Design & Media Arts",
+      "academicYear": 4,
+      "interests": [
+        "UI/UX Design",
+        "Design Systems",
+        "User Research"
+      ],
+      "preferredRoles": [
+        "UI/UX Designer",
+        "Product Designer"
+      ],
+      "weeklyAvailabilityHours": 19,
+      "learningGoals": "Design multi-platform interactive prototypes and conduct heuristic evaluations",
+      "currentCommitments": "Graduation portfolio, freelance design",
+      "workloadCapacity": 21,
+      "bio": "Design lead with 3+ years experience designing accessible UI systems, typography, and UX journeys.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-15",
+      "userId": "usr-student-15",
+      "department": "Electrical Engineering",
+      "academicYear": 3,
+      "interests": [
+        "IoT",
+        "Renewable Energy",
+        "Hardware"
+      ],
+      "preferredRoles": [
+        "IoT Developer",
+        "Hardware Engineer"
+      ],
+      "weeklyAvailabilityHours": 16,
+      "learningGoals": "Build LoRaWAN sensor nodes with ultra-low sleep power consumption",
+      "currentCommitments": "Circuits II, Signals and Systems",
+      "workloadCapacity": 17,
+      "bio": "Enjoys breadboarding hardware prototypes, soldering, and writing real-time embedded C code.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-16",
+      "userId": "usr-student-16",
+      "department": "Data Science",
+      "academicYear": 3,
+      "interests": [
+        "AI/ML",
+        "Data Visualization",
+        "Healthcare AI"
+      ],
+      "preferredRoles": [
+        "Data Scientist",
+        "Frontend Developer"
+      ],
+      "weeklyAvailabilityHours": 18,
+      "learningGoals": "Integrate dynamic D3 and Recharts dashboards with ML model predictions",
+      "currentCommitments": "Data mining, Statistical inference",
+      "workloadCapacity": 20,
+      "bio": "Combines data analytics, statistical rigor, and front-end visualization to communicate complex findings.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-17",
+      "userId": "usr-student-17",
+      "department": "Computer Science",
+      "academicYear": 2,
+      "interests": [
+        "Web Development",
+        "Testing",
+        "Full-Stack"
+      ],
+      "preferredRoles": [
+        "QA Tester",
+        "Frontend Developer"
+      ],
+      "weeklyAvailabilityHours": 15,
+      "learningGoals": "Learn Playwright end-to-end testing and React optimization",
+      "currentCommitments": "Software testing, Linear algebra",
+      "workloadCapacity": 15,
+      "bio": "Motivated second year student focused on building clean code with comprehensive automated tests.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-18",
+      "userId": "usr-student-18",
+      "department": "Software Engineering",
+      "academicYear": 4,
+      "interests": [
+        "Cloud Architecture",
+        "DevOps",
+        "Distributed Systems"
+      ],
+      "preferredRoles": [
+        "DevOps Engineer",
+        "Backend Developer"
+      ],
+      "weeklyAvailabilityHours": 20,
+      "learningGoals": "Deploy microservices with Kubernetes, Helm, and Istio service mesh",
+      "currentCommitments": "Capstone advisor meeting, Distributed algorithms",
+      "workloadCapacity": 22,
+      "bio": "Cloud enthusiast passionate about reliability engineering, blue-green deployments, and Terraform.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-19",
+      "userId": "usr-student-19",
+      "department": "Information Technology",
+      "academicYear": 3,
+      "interests": [
+        "Web Development",
+        "GraphQL",
+        "Mobile APIs"
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "API Specialist"
+      ],
+      "weeklyAvailabilityHours": 16,
+      "learningGoals": "Design high throughput GraphQL APIs and caching proxies",
+      "currentCommitments": "Web architecture, Ethics in computing",
+      "workloadCapacity": 18,
+      "bio": "Enjoys building clean API contracts, writing schema documentation, and ensuring sub-50ms query response.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-student-20",
+      "userId": "usr-student-20",
+      "department": "Computer Science",
+      "academicYear": 4,
+      "interests": [
+        "Distributed Systems",
+        "Web Development",
+        "AI/ML"
+      ],
+      "preferredRoles": [
+        "Project Lead",
+        "Full-Stack Developer"
+      ],
+      "weeklyAvailabilityHours": 22,
+      "learningGoals": "Coordinate multi-stakeholder capstones and implement automated contribution intelligence",
+      "currentCommitments": "Advanced compilers, thesis writing",
+      "workloadCapacity": 24,
+      "bio": "Senior student researcher in collaborative computing and algorithmic team formation models.",
+      "createdAt": "2026-10-23T20:58:22.014Z"
+    },
+    {
+      "id": "prof-usr-1792789102029-jizm4",
+      "userId": "usr-1792789102029-jizm4",
+      "department": "Data Science",
+      "academicYear": 3,
+      "interests": "[\"Web Development\",\"Software Engineering\"]",
+      "preferredRoles": "[\"Full-Stack Developer\"]",
+      "weeklyAvailabilityHours": 18,
+      "learningGoals": "Collaborate effectively and build robust projects",
+      "currentCommitments": "Full-time study",
+      "workloadCapacity": 20,
+      "bio": "Test Evaluation Student is an active student in Data Science.",
+      "createdAt": "2026-10-23T20:58:22.029Z"
+    }
+  ],
+  "userSkills": [
+    {
+      "id": "usk-usr-student-1-sk-nextjs",
+      "userId": "usr-student-1",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-1-sk-react",
+      "userId": "usr-student-1",
+      "skillId": "sk-react",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-1-sk-nodejs",
+      "userId": "usr-student-1",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-1-sk-postgres",
+      "userId": "usr-student-1",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-1-sk-docker",
+      "userId": "usr-student-1",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-2-sk-python",
+      "userId": "usr-student-2",
+      "skillId": "sk-python",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-2-sk-pytorch",
+      "userId": "usr-student-2",
+      "skillId": "sk-pytorch",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-2-sk-fastapi",
+      "userId": "usr-student-2",
+      "skillId": "sk-fastapi",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-2-sk-postgres",
+      "userId": "usr-student-2",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-3-sk-figma",
+      "userId": "usr-student-3",
+      "skillId": "sk-figma",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-3-sk-react",
+      "userId": "usr-student-3",
+      "skillId": "sk-react",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-3-sk-tailwind",
+      "userId": "usr-student-3",
+      "skillId": "sk-tailwind",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-3-sk-nextjs",
+      "userId": "usr-student-3",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-4-sk-docker",
+      "userId": "usr-student-4",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-4-sk-kubernetes",
+      "userId": "usr-student-4",
+      "skillId": "sk-kubernetes",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-4-sk-nodejs",
+      "userId": "usr-student-4",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-4-sk-postgres",
+      "userId": "usr-student-4",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-4-sk-python",
+      "userId": "usr-student-4",
+      "skillId": "sk-python",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-5-sk-nodejs",
+      "userId": "usr-student-5",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-5-sk-postgres",
+      "userId": "usr-student-5",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-5-sk-react",
+      "userId": "usr-student-5",
+      "skillId": "sk-react",
+      "proficiencyLevel": 2,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-6-sk-python",
+      "userId": "usr-student-6",
+      "skillId": "sk-python",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-6-sk-pytorch",
+      "userId": "usr-student-6",
+      "skillId": "sk-pytorch",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-6-sk-fastapi",
+      "userId": "usr-student-6",
+      "skillId": "sk-fastapi",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-6-sk-mongodb",
+      "userId": "usr-student-6",
+      "skillId": "sk-mongodb",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-7-sk-solidity",
+      "userId": "usr-student-7",
+      "skillId": "sk-solidity",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-7-sk-nodejs",
+      "userId": "usr-student-7",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-7-sk-postgres",
+      "userId": "usr-student-7",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-7-sk-react",
+      "userId": "usr-student-7",
+      "skillId": "sk-react",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-8-sk-embedded",
+      "userId": "usr-student-8",
+      "skillId": "sk-embedded",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-8-sk-python",
+      "userId": "usr-student-8",
+      "skillId": "sk-python",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-8-sk-docker",
+      "userId": "usr-student-8",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-8-sk-nodejs",
+      "userId": "usr-student-8",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 2,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-9-sk-react",
+      "userId": "usr-student-9",
+      "skillId": "sk-react",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-9-sk-nextjs",
+      "userId": "usr-student-9",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-9-sk-tailwind",
+      "userId": "usr-student-9",
+      "skillId": "sk-tailwind",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-9-sk-figma",
+      "userId": "usr-student-9",
+      "skillId": "sk-figma",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-10-sk-postgres",
+      "userId": "usr-student-10",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-10-sk-nodejs",
+      "userId": "usr-student-10",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-10-sk-mongodb",
+      "userId": "usr-student-10",
+      "skillId": "sk-mongodb",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-10-sk-docker",
+      "userId": "usr-student-10",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 2,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-11-sk-pytorch",
+      "userId": "usr-student-11",
+      "skillId": "sk-pytorch",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-11-sk-python",
+      "userId": "usr-student-11",
+      "skillId": "sk-python",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-11-sk-docker",
+      "userId": "usr-student-11",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-11-sk-fastapi",
+      "userId": "usr-student-11",
+      "skillId": "sk-fastapi",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-12-sk-nextjs",
+      "userId": "usr-student-12",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-12-sk-graphql",
+      "userId": "usr-student-12",
+      "skillId": "sk-graphql",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-12-sk-postgres",
+      "userId": "usr-student-12",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-12-sk-docker",
+      "userId": "usr-student-12",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-13-sk-nodejs",
+      "userId": "usr-student-13",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-13-sk-postgres",
+      "userId": "usr-student-13",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-13-sk-docker",
+      "userId": "usr-student-13",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-13-sk-solidity",
+      "userId": "usr-student-13",
+      "skillId": "sk-solidity",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-14-sk-figma",
+      "userId": "usr-student-14",
+      "skillId": "sk-figma",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-14-sk-tailwind",
+      "userId": "usr-student-14",
+      "skillId": "sk-tailwind",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-14-sk-react",
+      "userId": "usr-student-14",
+      "skillId": "sk-react",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-15-sk-embedded",
+      "userId": "usr-student-15",
+      "skillId": "sk-embedded",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-15-sk-python",
+      "userId": "usr-student-15",
+      "skillId": "sk-python",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-15-sk-docker",
+      "userId": "usr-student-15",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 2,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-16-sk-python",
+      "userId": "usr-student-16",
+      "skillId": "sk-python",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-16-sk-react",
+      "userId": "usr-student-16",
+      "skillId": "sk-react",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-16-sk-postgres",
+      "userId": "usr-student-16",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-16-sk-pytorch",
+      "userId": "usr-student-16",
+      "skillId": "sk-pytorch",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-17-sk-react",
+      "userId": "usr-student-17",
+      "skillId": "sk-react",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-17-sk-nodejs",
+      "userId": "usr-student-17",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-17-sk-tailwind",
+      "userId": "usr-student-17",
+      "skillId": "sk-tailwind",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-18-sk-kubernetes",
+      "userId": "usr-student-18",
+      "skillId": "sk-kubernetes",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-18-sk-docker",
+      "userId": "usr-student-18",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-18-sk-fastapi",
+      "userId": "usr-student-18",
+      "skillId": "sk-fastapi",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-18-sk-postgres",
+      "userId": "usr-student-18",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-19-sk-graphql",
+      "userId": "usr-student-19",
+      "skillId": "sk-graphql",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-19-sk-nodejs",
+      "userId": "usr-student-19",
+      "skillId": "sk-nodejs",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-19-sk-mongodb",
+      "userId": "usr-student-19",
+      "skillId": "sk-mongodb",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-19-sk-nextjs",
+      "userId": "usr-student-19",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 3,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-20-sk-nextjs",
+      "userId": "usr-student-20",
+      "skillId": "sk-nextjs",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-20-sk-python",
+      "userId": "usr-student-20",
+      "skillId": "sk-python",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-20-sk-postgres",
+      "userId": "usr-student-20",
+      "skillId": "sk-postgres",
+      "proficiencyLevel": 5,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-20-sk-docker",
+      "userId": "usr-student-20",
+      "skillId": "sk-docker",
+      "proficiencyLevel": 4,
+      "verified": true
+    },
+    {
+      "id": "usk-usr-student-20-sk-react",
+      "userId": "usr-student-20",
+      "skillId": "sk-react",
+      "proficiencyLevel": 5,
+      "verified": true
+    }
+  ],
+  "availabilitySlots": [
+    {
+      "id": "av-usr-student-1-0",
+      "userId": "usr-student-1",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-1-1",
+      "userId": "usr-student-1",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-1-2",
+      "userId": "usr-student-1",
+      "dayOfWeek": 5,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-1-3",
+      "userId": "usr-student-1",
+      "dayOfWeek": 6,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-2-0",
+      "userId": "usr-student-2",
+      "dayOfWeek": 1,
+      "startHour": 15,
+      "endHour": 19
+    },
+    {
+      "id": "av-usr-student-2-1",
+      "userId": "usr-student-2",
+      "dayOfWeek": 2,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-2-2",
+      "userId": "usr-student-2",
+      "dayOfWeek": 4,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-2-3",
+      "userId": "usr-student-2",
+      "dayOfWeek": 6,
+      "startHour": 11,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-3-0",
+      "userId": "usr-student-3",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-3-1",
+      "userId": "usr-student-3",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-3-2",
+      "userId": "usr-student-3",
+      "dayOfWeek": 5,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-4-0",
+      "userId": "usr-student-4",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-4-1",
+      "userId": "usr-student-4",
+      "dayOfWeek": 2,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-4-2",
+      "userId": "usr-student-4",
+      "dayOfWeek": 4,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-4-3",
+      "userId": "usr-student-4",
+      "dayOfWeek": 6,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-5-0",
+      "userId": "usr-student-5",
+      "dayOfWeek": 2,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-5-1",
+      "userId": "usr-student-5",
+      "dayOfWeek": 4,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-5-2",
+      "userId": "usr-student-5",
+      "dayOfWeek": 6,
+      "startHour": 9,
+      "endHour": 14
+    },
+    {
+      "id": "av-usr-student-6-0",
+      "userId": "usr-student-6",
+      "dayOfWeek": 1,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-6-1",
+      "userId": "usr-student-6",
+      "dayOfWeek": 3,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-6-2",
+      "userId": "usr-student-6",
+      "dayOfWeek": 5,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-7-0",
+      "userId": "usr-student-7",
+      "dayOfWeek": 2,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-7-1",
+      "userId": "usr-student-7",
+      "dayOfWeek": 4,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-7-2",
+      "userId": "usr-student-7",
+      "dayOfWeek": 6,
+      "startHour": 13,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-8-0",
+      "userId": "usr-student-8",
+      "dayOfWeek": 1,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-8-1",
+      "userId": "usr-student-8",
+      "dayOfWeek": 3,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-8-2",
+      "userId": "usr-student-8",
+      "dayOfWeek": 5,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-9-0",
+      "userId": "usr-student-9",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-9-1",
+      "userId": "usr-student-9",
+      "dayOfWeek": 2,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-9-2",
+      "userId": "usr-student-9",
+      "dayOfWeek": 4,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-10-0",
+      "userId": "usr-student-10",
+      "dayOfWeek": 3,
+      "startHour": 12,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-10-1",
+      "userId": "usr-student-10",
+      "dayOfWeek": 5,
+      "startHour": 12,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-10-2",
+      "userId": "usr-student-10",
+      "dayOfWeek": 6,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-11-0",
+      "userId": "usr-student-11",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-11-1",
+      "userId": "usr-student-11",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-11-2",
+      "userId": "usr-student-11",
+      "dayOfWeek": 5,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-12-0",
+      "userId": "usr-student-12",
+      "dayOfWeek": 2,
+      "startHour": 13,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-12-1",
+      "userId": "usr-student-12",
+      "dayOfWeek": 4,
+      "startHour": 13,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-12-2",
+      "userId": "usr-student-12",
+      "dayOfWeek": 6,
+      "startHour": 11,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-13-0",
+      "userId": "usr-student-13",
+      "dayOfWeek": 1,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-13-1",
+      "userId": "usr-student-13",
+      "dayOfWeek": 3,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-13-2",
+      "userId": "usr-student-13",
+      "dayOfWeek": 5,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-14-0",
+      "userId": "usr-student-14",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-14-1",
+      "userId": "usr-student-14",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-14-2",
+      "userId": "usr-student-14",
+      "dayOfWeek": 4,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-14-3",
+      "userId": "usr-student-14",
+      "dayOfWeek": 6,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-15-0",
+      "userId": "usr-student-15",
+      "dayOfWeek": 2,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-15-1",
+      "userId": "usr-student-15",
+      "dayOfWeek": 4,
+      "startHour": 10,
+      "endHour": 15
+    },
+    {
+      "id": "av-usr-student-15-2",
+      "userId": "usr-student-15",
+      "dayOfWeek": 5,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-16-0",
+      "userId": "usr-student-16",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-16-1",
+      "userId": "usr-student-16",
+      "dayOfWeek": 2,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-16-2",
+      "userId": "usr-student-16",
+      "dayOfWeek": 4,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-17-0",
+      "userId": "usr-student-17",
+      "dayOfWeek": 2,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-17-1",
+      "userId": "usr-student-17",
+      "dayOfWeek": 4,
+      "startHour": 12,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-17-2",
+      "userId": "usr-student-17",
+      "dayOfWeek": 6,
+      "startHour": 10,
+      "endHour": 14
+    },
+    {
+      "id": "av-usr-student-18-0",
+      "userId": "usr-student-18",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-18-1",
+      "userId": "usr-student-18",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-18-2",
+      "userId": "usr-student-18",
+      "dayOfWeek": 5,
+      "startHour": 10,
+      "endHour": 16
+    },
+    {
+      "id": "av-usr-student-19-0",
+      "userId": "usr-student-19",
+      "dayOfWeek": 2,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-19-1",
+      "userId": "usr-student-19",
+      "dayOfWeek": 4,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-19-2",
+      "userId": "usr-student-19",
+      "dayOfWeek": 5,
+      "startHour": 13,
+      "endHour": 17
+    },
+    {
+      "id": "av-usr-student-20-0",
+      "userId": "usr-student-20",
+      "dayOfWeek": 1,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-20-1",
+      "userId": "usr-student-20",
+      "dayOfWeek": 2,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-20-2",
+      "userId": "usr-student-20",
+      "dayOfWeek": 3,
+      "startHour": 14,
+      "endHour": 18
+    },
+    {
+      "id": "av-usr-student-20-3",
+      "userId": "usr-student-20",
+      "dayOfWeek": 5,
+      "startHour": 10,
+      "endHour": 16
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1792789102057",
+      "title": "Pair Programming Mobile Suite",
+      "description": "Flutter project for 2 members",
+      "category": "Web Development",
+      "expectedTeamSize": 2,
+      "weeklyMeetingHours": 4,
+      "workloadHours": 60,
+      "deadline": "2026-11-22T20:58:22.057Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-1",
+      "requirements": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Phase 1: Project Setup & Research",
+          "completed": false
+        },
+        {
+          "id": "m2",
+          "title": "Phase 2: Core Architecture & Prototype",
+          "completed": false
+        },
+        {
+          "id": "m3",
+          "title": "Phase 3: Implementation & Review",
+          "completed": false
+        },
+        {
+          "id": "m4",
+          "title": "Phase 4: Final Testing & Submission",
+          "completed": false
+        }
+      ],
+      "createdAt": "2026-10-23T20:58:22.057Z",
+      "updatedAt": "2026-10-23T20:58:22.057Z"
+    },
+    {
+      "id": "proj-1792789102043",
+      "title": "Autonomous Drone Navigation Capstone",
+      "description": "ROS2 and computer vision for indoor localization",
+      "category": "AI/ML",
+      "expectedTeamSize": 3,
+      "weeklyMeetingHours": 3,
+      "workloadHours": 50,
+      "deadline": "2026-11-22T20:58:22.043Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-1",
+      "requirements": [],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Phase 1: Project Setup & Research",
+          "completed": false
+        },
+        {
+          "id": "m2",
+          "title": "Phase 2: Core Architecture & Prototype",
+          "completed": false
+        },
+        {
+          "id": "m3",
+          "title": "Phase 3: Implementation & Review",
+          "completed": false
+        },
+        {
+          "id": "m4",
+          "title": "Phase 4: Final Testing & Submission",
+          "completed": false
+        }
+      ],
+      "createdAt": "2026-10-23T20:58:22.043Z",
+      "updatedAt": "2026-10-23T20:58:22.043Z"
+    },
+    {
+      "id": "proj-teamsync",
+      "title": "TeamSync AI: Intelligent Student Collaboration Platform",
+      "description": "Explainable AI-driven team formation platform with balanced workload management, skill-gap analysis, and verified contribution analytics.",
+      "category": "Web Development",
+      "expectedTeamSize": 4,
+      "weeklyMeetingHours": 4,
+      "workloadHours": 80,
+      "deadline": "2026-11-08T00:00:00.000Z",
+      "status": "IN_PROGRESS",
+      "ownerId": "usr-student-1",
+      "requirements": [
+        {
+          "skillId": "sk-nextjs",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "Frontend Lead"
+        },
+        {
+          "skillId": "sk-postgres",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Backend & DB Lead"
+        },
+        {
+          "skillId": "sk-figma",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "UI/UX Designer"
+        },
+        {
+          "skillId": "sk-docker",
+          "minProficiency": 2,
+          "isRequired": false,
+          "roleName": "DevOps Specialist"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Architecture & Schema Finalization",
+          "dueDate": "2026-09-15",
+          "completed": true
+        },
+        {
+          "id": "m2",
+          "title": "Matching Engine & Simulator",
+          "dueDate": "2026-10-01",
+          "completed": true
+        },
+        {
+          "id": "m3",
+          "title": "Kanban Workspace & Deliverables Review",
+          "dueDate": "2026-10-20",
+          "completed": true
+        },
+        {
+          "id": "m4",
+          "title": "Contribution Intelligence & Final Evaluation",
+          "dueDate": "2026-11-08",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "proj-healthpulse",
+      "title": "HealthPulse: Predictive Patient Health Monitor",
+      "description": "Real-time telemetry and predictive deep learning diagnostic platform for cardiology telemetry and early arrhythmia detection.",
+      "category": "AI/ML",
+      "expectedTeamSize": 4,
+      "weeklyMeetingHours": 3,
+      "workloadHours": 75,
+      "deadline": "2026-11-15T00:00:00.000Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-2",
+      "requirements": [
+        {
+          "skillId": "sk-python",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "AI Engineer"
+        },
+        {
+          "skillId": "sk-pytorch",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "Deep Learning Model Lead"
+        },
+        {
+          "skillId": "sk-fastapi",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "API Engineer"
+        },
+        {
+          "skillId": "sk-react",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Dashboard Developer"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Dataset Acquisition & Cleaning",
+          "dueDate": "2026-09-20",
+          "completed": true
+        },
+        {
+          "id": "m2",
+          "title": "Model Training & Validation",
+          "dueDate": "2026-10-15",
+          "completed": false
+        },
+        {
+          "id": "m3",
+          "title": "Inference API & Clinical UI",
+          "dueDate": "2026-11-15",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "proj-finflow",
+      "title": "FinFlow: Decentralized Micro-Lending Portal",
+      "description": "Peer-to-peer microcredit application leveraging automated risk scoring, collateral smart contracts, and transparent loan servicing.",
+      "category": "FinTech",
+      "expectedTeamSize": 3,
+      "weeklyMeetingHours": 3,
+      "workloadHours": 60,
+      "deadline": "2026-11-20T00:00:00.000Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-7",
+      "requirements": [
+        {
+          "skillId": "sk-solidity",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "Smart Contract Lead"
+        },
+        {
+          "skillId": "sk-nodejs",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Backend Developer"
+        },
+        {
+          "skillId": "sk-react",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Frontend Engineer"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Smart Contract Architecture",
+          "dueDate": "2026-09-30",
+          "completed": true
+        },
+        {
+          "id": "m2",
+          "title": "Testnet Deployment & Security Audit",
+          "dueDate": "2026-10-25",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "proj-ecotrack",
+      "title": "EcoTrack: Campus IoT Carbon Footprint Monitor",
+      "description": "Distributed ambient environmental sensor array monitoring greenhouse gas concentrations and real-time energy consumption across university halls.",
+      "category": "IoT",
+      "expectedTeamSize": 4,
+      "weeklyMeetingHours": 4,
+      "workloadHours": 70,
+      "deadline": "2026-12-01T00:00:00.000Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-8",
+      "requirements": [
+        {
+          "skillId": "sk-embedded",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "Firmware Engineer"
+        },
+        {
+          "skillId": "sk-python",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Telemetry Pipeline Lead"
+        },
+        {
+          "skillId": "sk-docker",
+          "minProficiency": 3,
+          "isRequired": false,
+          "roleName": "DevOps Lead"
+        },
+        {
+          "skillId": "sk-react",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Analytics Dashboard"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Hardware Sensor Calibration",
+          "dueDate": "2026-10-10",
+          "completed": true
+        },
+        {
+          "id": "m2",
+          "title": "MQTT Broker & InfluxDB Setup",
+          "dueDate": "2026-11-01",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "proj-eduvr",
+      "title": "EduVR: Immersive Virtual STEM Laboratory",
+      "description": "Interactive web-based 3D physics and chemistry simulation suite enabling students to safely perform virtual hazardous experiments.",
+      "category": "Web Development",
+      "expectedTeamSize": 4,
+      "weeklyMeetingHours": 3,
+      "workloadHours": 65,
+      "deadline": "2026-12-10T00:00:00.000Z",
+      "status": "RECRUITING",
+      "ownerId": "usr-student-14",
+      "requirements": [
+        {
+          "skillId": "sk-figma",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "3D/UX Designer"
+        },
+        {
+          "skillId": "sk-react",
+          "minProficiency": 4,
+          "isRequired": true,
+          "roleName": "Interactive Frontend"
+        },
+        {
+          "skillId": "sk-nodejs",
+          "minProficiency": 3,
+          "isRequired": true,
+          "roleName": "Backend & State Sync"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "User Journey & Simulation Wireframes",
+          "dueDate": "2026-10-15",
+          "completed": true
+        },
+        {
+          "id": "m2",
+          "title": "Physics Engine Integration",
+          "dueDate": "2026-11-10",
+          "completed": false
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "team-alpha",
+      "name": "Alpha Core Innovators",
+      "projectId": "proj-teamsync",
+      "status": "ACTIVE",
+      "memberships": [
+        {
+          "userId": "usr-student-1",
+          "role": "PROJECT_LEAD",
+          "joinedAt": "2026-08-25T10:00:00.000Z"
+        },
+        {
+          "userId": "usr-student-3",
+          "role": "UI_UX_DESIGNER",
+          "joinedAt": "2026-08-26T11:00:00.000Z"
+        },
+        {
+          "userId": "usr-student-4",
+          "role": "DEVOPS_ENGINEER",
+          "joinedAt": "2026-08-26T14:30:00.000Z"
+        },
+        {
+          "userId": "usr-student-5",
+          "role": "BACKEND_DEVELOPER",
+          "joinedAt": "2026-08-28T09:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "team-1792789102043",
+      "name": "Autonomous Drone Navigat Team",
+      "projectId": "proj-1792789102043",
+      "status": "ACTIVE",
+      "memberships": [
+        {
+          "userId": "usr-student-1",
+          "role": "PROJECT_LEAD",
+          "joinedAt": "2026-10-23T20:58:22.044Z"
+        }
+      ]
+    },
+    {
+      "id": "team-1792789102057",
+      "name": "Pair Programming Mobile  Team",
+      "projectId": "proj-1792789102057",
+      "status": "ACTIVE",
+      "memberships": [
+        {
+          "userId": "usr-student-1",
+          "role": "PROJECT_LEAD",
+          "joinedAt": "2026-10-23T20:58:22.057Z"
+        },
+        {
+          "userId": "usr-student-2",
+          "role": "FRONTEND",
+          "joinedAt": "2026-10-23T20:58:22.074Z"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-101",
+      "teamId": "team-alpha",
+      "title": "Design explainable matching scoring formula & API endpoints",
+      "description": "Implement multi-factor weighted equation M = 0.40S + 0.25A + 0.15I + 0.10R + 0.10W with weight validation and normalization.",
+      "status": "COMPLETED",
+      "priority": "HIGH",
+      "assignedToId": "usr-student-1",
+      "createdById": "usr-student-1",
+      "dueDate": "2026-09-18",
+      "estimatedHours": 12,
+      "acceptanceCriteria": "Unit tests passing for all 5 sub-scores; weights strictly summing to 1.0; deterministic output.",
+      "blockerDescription": null
+    },
+    {
+      "id": "task-102",
+      "teamId": "team-alpha",
+      "title": "Build Interactive What-If Team Simulator UI",
+      "description": "Create an interactive simulator allowing users to adjust weight sliders, add/remove candidate members, and observe real-time skill & availability score changes.",
+      "status": "COMPLETED",
+      "priority": "HIGH",
+      "assignedToId": "usr-student-3",
+      "createdById": "usr-student-1",
+      "dueDate": "2026-09-25",
+      "estimatedHours": 10,
+      "acceptanceCriteria": "Dynamic recalculation via client service, responsive sliders, visual explanation badges.",
+      "blockerDescription": null
+    },
+    {
+      "id": "task-103",
+      "teamId": "team-alpha",
+      "title": "Implement Deliverable Submission & Independent Review Workflow",
+      "description": "Enable members to submit pull request / document links, with reviewer approval, rejection notes, and score attribution.",
+      "status": "IN_REVIEW",
+      "priority": "MEDIUM",
+      "assignedToId": "usr-student-5",
+      "createdById": "usr-student-1",
+      "dueDate": "2026-10-18",
+      "estimatedHours": 8,
+      "acceptanceCriteria": "Prevent self-approval on reviews; log ContributionEvent on submission and approval.",
+      "blockerDescription": null
+    },
+    {
+      "id": "task-104",
+      "teamId": "team-alpha",
+      "title": "Containerization, Docker Compose, & Production Health Checks",
+      "description": "Configure Dockerfile, compose services for app and database, and add health probe endpoints.",
+      "status": "IN_PROGRESS",
+      "priority": "MEDIUM",
+      "assignedToId": "usr-student-4",
+      "createdById": "usr-student-1",
+      "dueDate": "2026-10-30",
+      "estimatedHours": 6,
+      "acceptanceCriteria": "App boots in single compose command; health endpoint returns HTTP 200 with uptime.",
+      "blockerDescription": null
+    },
+    {
+      "id": "task-105",
+      "teamId": "team-alpha",
+      "title": "Automated Contribution Dispute Resolution & Audit Trail",
+      "description": "Provide students a workflow to flag missing evidence or report unequal distribution, with faculty/lead recorded resolution.",
+      "status": "TODO",
+      "priority": "HIGH",
+      "assignedToId": "usr-student-1",
+      "createdById": "usr-student-1",
+      "dueDate": "2026-11-05",
+      "estimatedHours": 8,
+      "acceptanceCriteria": "Dispute status transitions; recorded resolution notes; immutable audit events.",
+      "blockerDescription": null
+    },
+    {
+      "id": "task-1792789102115",
+      "teamId": "team-alpha",
+      "title": "Security Audit Script",
+      "description": "Verify JWT expiration bounds",
+      "status": "COMPLETED",
+      "priority": "MEDIUM",
+      "assignedToId": "usr-student-1",
+      "createdById": "usr-student-1",
+      "dueDate": null,
+      "estimatedHours": 4,
+      "acceptanceCriteria": "Deliver code and pass reviews",
+      "blockerDescription": null,
+      "createdAt": "2026-10-23T20:58:22.115Z",
+      "updatedAt": "2026-10-23T20:58:22.115Z"
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "del-1",
+      "taskId": "task-101",
+      "teamId": "team-alpha",
+      "submittedById": "usr-student-1",
+      "title": "PR #14: Explainable Recommendation Engine Implementation",
+      "fileUrlOrLink": "https://github.com/teamsync-ai/core/pull/14",
+      "notes": "Includes unit tests in tests/matching.test.js covering all boundary conditions and normalization.",
+      "status": "APPROVED",
+      "createdAt": "2026-09-18T16:00:00.000Z"
+    },
+    {
+      "id": "del-2",
+      "taskId": "task-102",
+      "teamId": "team-alpha",
+      "submittedById": "usr-student-3",
+      "title": "PR #21: What-If Simulator Frontend Component & Style System",
+      "fileUrlOrLink": "https://github.com/teamsync-ai/core/pull/21",
+      "notes": "Responsive UI components with electric blue and deep indigo theme token compliance.",
+      "status": "APPROVED",
+      "createdAt": "2026-09-25T18:30:00.000Z"
+    },
+    {
+      "id": "del-3",
+      "taskId": "task-103",
+      "teamId": "team-alpha",
+      "submittedById": "usr-student-5",
+      "title": "PR #32: Deliverables API & Review Approval Guardrails",
+      "fileUrlOrLink": "https://github.com/teamsync-ai/core/pull/32",
+      "notes": "Submitted for peer review. Enforces requirement that submitters cannot approve their own PR.",
+      "status": "SUBMITTED",
+      "createdAt": "2026-10-18T14:00:00.000Z"
+    },
+    {
+      "id": "del-1792789102125",
+      "taskId": "task-1792789102115",
+      "teamId": "team-alpha",
+      "submittedById": "usr-student-1",
+      "title": "PR #99 Security Audit",
+      "fileUrlOrLink": "https://github.com/teamsync-ai/core/pull/99",
+      "notes": "",
+      "status": "APPROVED",
+      "createdAt": "2026-10-23T20:58:22.125Z",
+      "updatedAt": "2026-10-23T20:58:22.138Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "deliverableId": "del-1",
+      "reviewerId": "usr-student-4",
+      "decision": "APPROVED",
+      "comments": "Superb mathematical precision and 100% test pass on edge cases. Ready to merge.",
+      "score": 10,
+      "createdAt": "2026-09-19T09:30:00.000Z"
+    },
+    {
+      "id": "rev-2",
+      "deliverableId": "del-2",
+      "reviewerId": "usr-student-1",
+      "decision": "APPROVED",
+      "comments": "UI is fluid and visually impressive. Slider recalculation handles edge values smoothly.",
+      "score": 9,
+      "createdAt": "2026-09-26T10:15:00.000Z"
+    },
+    {
+      "id": "rev-1792789102138",
+      "deliverableId": "del-1792789102125",
+      "reviewerId": "usr-student-4",
+      "decision": "APPROVED",
+      "comments": "Verified independently. Passing all assertions.",
+      "score": 10,
+      "createdAt": "2026-10-23T20:58:22.138Z"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "evt-1",
+      "teamId": "team-alpha",
+      "userId": "usr-student-1",
+      "taskId": "task-101",
+      "eventType": "TASK_COMPLETED",
+      "title": "Completed matching formula architecture & test suite",
+      "details": "Authored 7 unit tests and verified 5-factor equation normalization",
+      "weight": 1.5,
+      "verified": true,
+      "timestamp": "2026-09-18T16:30:00.000Z"
+    },
+    {
+      "id": "evt-2",
+      "teamId": "team-alpha",
+      "userId": "usr-student-3",
+      "taskId": "task-102",
+      "eventType": "TASK_COMPLETED",
+      "title": "Built and verified What-If Simulator interface",
+      "details": "Integrated real-time weight adjustments and comparison charts",
+      "weight": 1.4,
+      "verified": true,
+      "timestamp": "2026-09-25T18:45:00.000Z"
+    },
+    {
+      "id": "evt-3",
+      "teamId": "team-alpha",
+      "userId": "usr-student-4",
+      "taskId": "task-101",
+      "eventType": "REVIEW_COMPLETED",
+      "title": "Peer code review on PR #14",
+      "details": "Verified test assertions and approved matching engine PR",
+      "weight": 0.8,
+      "verified": true,
+      "timestamp": "2026-09-19T09:30:00.000Z"
+    },
+    {
+      "id": "evt-4",
+      "teamId": "team-alpha",
+      "userId": "usr-student-5",
+      "taskId": "task-103",
+      "eventType": "DELIVERABLE_SUBMITTED",
+      "title": "Submitted PR #32 for deliverable review workflow",
+      "details": "Completed route handlers and authorization checks",
+      "weight": 1.2,
+      "verified": true,
+      "timestamp": "2026-10-18T14:00:00.000Z"
+    },
+    {
+      "id": "evt-5",
+      "teamId": "team-alpha",
+      "userId": "usr-student-4",
+      "taskId": "task-104",
+      "eventType": "CODE_COMMITTED",
+      "title": "Configured Dockerfile multi-stage build & Next.js standalone output",
+      "details": "Optimized container image size down to 180MB",
+      "weight": 1,
+      "verified": true,
+      "timestamp": "2026-10-22T11:20:00.000Z"
+    },
+    {
+      "id": "evt-1792789102074",
+      "teamId": "team-1792789102057",
+      "userId": "usr-student-2",
+      "eventType": "PEER_HELP",
+      "title": "Sarah Miller joined the team",
+      "details": "Role assigned: FRONTEND",
+      "weight": 0.5,
+      "verified": true,
+      "timestamp": "2026-10-23T20:58:22.074Z"
+    },
+    {
+      "id": "evt-1792789102115",
+      "teamId": "team-alpha",
+      "userId": "usr-student-1",
+      "taskId": "task-1792789102115",
+      "eventType": "TASK_CREATED",
+      "title": "Created task: \"Security Audit Script\"",
+      "details": "Priority: MEDIUM, Estimated: 4h",
+      "weight": 0.5,
+      "verified": true,
+      "timestamp": "2026-10-23T20:58:22.115Z"
+    },
+    {
+      "id": "evt-1792789102125",
+      "teamId": "team-alpha",
+      "userId": "usr-student-1",
+      "taskId": "task-1792789102115",
+      "eventType": "DELIVERABLE_SUBMITTED",
+      "title": "Submitted deliverable: \"PR #99 Security Audit\"",
+      "details": "Link: https://github.com/teamsync-ai/core/pull/99",
+      "weight": 1.2,
+      "verified": true,
+      "timestamp": "2026-10-23T20:58:22.125Z"
+    },
+    {
+      "id": "evt-1792789102139",
+      "teamId": "team-alpha",
+      "userId": "usr-student-4",
+      "taskId": "task-1792789102115",
+      "eventType": "REVIEW_COMPLETED",
+      "title": "Reviewed deliverable: \"PR #99 Security Audit\" (APPROVED)",
+      "details": "Verified independently. Passing all assertions.",
+      "weight": 0.8,
+      "verified": true,
+      "timestamp": "2026-10-23T20:58:22.139Z"
+    }
+  ],
+  "disputes": [
+    {
+      "id": "disp-1",
+      "teamId": "team-alpha",
+      "reportedById": "usr-student-5",
+      "title": "Missing recorded credit for schema review session",
+      "reason": "Attended 2-hour Saturday architecture review and contributed database migration constraints, but no contribution event was automatically logged.",
+      "requestedCorrection": "Add verified 2.0 hour contribution event for architecture review.",
+      "status": "RESOLVED",
+      "resolutionNotes": "Verified attendance through meeting notes. Credited peer collaboration event.",
+      "resolvedById": "usr-student-1",
+      "createdAt": "2026-10-02T10:00:00.000Z",
+      "resolvedAt": "2026-10-03T15:00:00.000Z"
+    },
+    {
+      "id": "disp-2",
+      "teamId": "team-alpha",
+      "reportedById": "usr-student-4",
+      "title": "Deliverable review latency blocking pipeline setup",
+      "reason": "PR #28 infrastructure review has been waiting for more than 4 days, causing task deadline delay.",
+      "requestedCorrection": "Reassign review or expedite approval.",
+      "status": "UNDER_REVIEW",
+      "resolutionNotes": null,
+      "resolvedById": null,
+      "createdAt": "2026-10-21T09:00:00.000Z",
+      "resolvedAt": null
+    },
+    {
+      "id": "disp-1792789102154",
+      "teamId": "team-alpha",
+      "reportedById": "usr-student-5",
+      "title": "Contested sprint workload weight",
+      "reason": "Executed database schema migrations that were not credited in sprint points",
+      "requestedCorrection": "Add 1.5 contribution points",
+      "status": "RESOLVED",
+      "resolutionNotes": "Reviewed git history. Confirmed migration commits. Credited 1.5 points.",
+      "resolvedById": "usr-student-1",
+      "createdAt": "2026-10-23T20:58:22.154Z",
+      "resolvedAt": "2026-10-23T20:58:22.162Z"
+    }
+  ],
+  "peerFeedback": [
+    {
+      "id": "fb-1",
+      "teamId": "team-alpha",
+      "fromUserId": "usr-student-1",
+      "toUserId": "usr-student-3",
+      "rating": 5,
+      "strengths": "Exceptional UI execution, swift turnaround on interactive simulator components.",
+      "improvements": "Continue documenting responsive CSS breakpoints.",
+      "anonymous": false,
+      "createdAt": "2026-10-01T12:00:00.000Z"
+    },
+    {
+      "id": "fb-2",
+      "teamId": "team-alpha",
+      "fromUserId": "usr-student-3",
+      "toUserId": "usr-student-1",
+      "rating": 5,
+      "strengths": "Clear architectural roadmap and transparent delegation.",
+      "improvements": "None, fantastic project leadership.",
+      "anonymous": false,
+      "createdAt": "2026-10-02T14:30:00.000Z"
+    }
+  ],
+  "auditLogs": [],
+  "notifications": []
+}

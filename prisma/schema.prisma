@@ -1,0 +1,340 @@
+// TeamSync AI - Prisma Schema
+// Database Architect: PostgreSQL with Prisma ORM
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  PROJECT_OWNER
+  REVIEWER
+  FACULTY_ADMIN
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  IN_REVIEW
+  COMPLETED
+}
+
+enum TaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum DeliverableStatus {
+  SUBMITTED
+  APPROVED
+  CHANGES_REQUESTED
+}
+
+enum DisputeStatus {
+  OPEN
+  UNDER_REVIEW
+  RESOLVED
+  REJECTED
+}
+
+enum InvitationStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String
+  name          String
+  role          Role      @default(STUDENT)
+  avatarUrl     String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  studentProfile       StudentProfile?
+  userSkills           UserSkill[]
+  availabilitySlots    AvailabilitySlot[]
+  ownedProjects        Project[]            @relation("ProjectOwner")
+  teamMemberships      TeamMembership[]
+  assignedTasks        Task[]               @relation("TaskAssignee")
+  createdTasks         Task[]               @relation("TaskCreator")
+  taskComments         TaskComment[]
+  deliverables         Deliverable[]        @relation("DeliverableSubmitter")
+  reviews              Review[]             @relation("ReviewAuthor")
+  contributionEvents   ContributionEvent[]
+  givenFeedback        PeerFeedback[]       @relation("FeedbackSender")
+  receivedFeedback     PeerFeedback[]       @relation("FeedbackReceiver")
+  reportedDisputes     ContributionDispute[] @relation("DisputeReporter")
+  resolvedDisputes     ContributionDispute[] @relation("DisputeResolver")
+  sentInvitations      TeamInvitation[]     @relation("InvitationSender")
+  receivedInvitations  TeamInvitation[]     @relation("InvitationRecipient")
+  auditLogs            AuditLog[]
+  notifications        Notification[]
+}
+
+model StudentProfile {
+  id                      String   @id @default(cuid())
+  userId                  String   @unique
+  user                    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  department              String   // e.g., "Computer Science", "Information Tech", "Data Science"
+  academicYear            Int      // 1, 2, 3, 4
+  interests               String   // JSON stringified array of interest topics
+  preferredRoles          String   // JSON stringified array of roles
+  weeklyAvailabilityHours Int      @default(15)
+  learningGoals           String?
+  currentCommitments      String?  // e.g. "2 courses, part-time TA"
+  workloadCapacity        Int      @default(20) // Max hours per week
+  bio                     String?
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+}
+
+model Skill {
+  id          String      @id @default(cuid())
+  name        String      @unique
+  category    String      // Frontend, Backend, AI/ML, DevOps, Design, Database, etc.
+  description String?
+  userSkills  UserSkill[]
+  requirements ProjectRequirement[]
+}
+
+model UserSkill {
+  id               String   @id @default(cuid())
+  userId           String
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skillId          String
+  skill            Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  proficiencyLevel Int      @default(3) // 1 (Beginner) to 5 (Expert)
+  verified         Boolean  @default(false)
+
+  @@unique([userId, skillId])
+}
+
+model AvailabilitySlot {
+  id        String @id @default(cuid())
+  userId    String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dayOfWeek Int    // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+  startHour Int    // 0 to 23
+  endHour   Int    // 1 to 24
+
+  @@index([userId, dayOfWeek])
+}
+
+model Project {
+  id                 String               @id @default(cuid())
+  title              String
+  description        String
+  category           String               // "Web Development", "AI/ML", "Mobile App", "Cybersecurity", "IoT"
+  expectedTeamSize   Int                  @default(4)
+  weeklyMeetingHours Int                  @default(4)
+  deadline           DateTime
+  milestones         String               // JSON stringified array of milestones
+  workloadHours      Int                  @default(60) // Total project workload hours
+  status             String               @default("RECRUITING") // RECRUITING, IN_PROGRESS, COMPLETED, ARCHIVED
+  ownerId            String
+  owner              User                 @relation("ProjectOwner", fields: [ownerId], references: [id])
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+
+  requirements       ProjectRequirement[]
+  teams              Team[]
+}
+
+model ProjectRequirement {
+  id             String  @id @default(cuid())
+  projectId      String
+  project        Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  skillId        String
+  skill          Skill   @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  minProficiency Int     @default(2) // 1 to 5
+  isRequired     Boolean @default(true)
+  roleName       String? // e.g. "Frontend Lead", "Data Engineer"
+}
+
+model Team {
+  id          String               @id @default(cuid())
+  name        String
+  projectId   String
+  project     Project              @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  status      String               @default("ACTIVE") // FORMING, ACTIVE, SUBMITTED, EVALUATED
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  memberships TeamMembership[]
+  invitations TeamInvitation[]
+  tasks       Task[]
+  deliverables Deliverable[]
+  events      ContributionEvent[]
+  peerReviews PeerFeedback[]
+  disputes    ContributionDispute[]
+}
+
+model TeamMembership {
+  id       String   @id @default(cuid())
+  teamId   String
+  team     Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role     String   @default("MEMBER") // "LEAD", "FRONTEND", "BACKEND", "DESIGNER", "MEMBER"
+  joinedAt DateTime @default(now())
+
+  @@unique([teamId, userId])
+}
+
+model TeamInvitation {
+  id         String           @id @default(cuid())
+  teamId     String
+  team       Team             @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User             @relation("InvitationRecipient", fields: [userId], references: [id], onDelete: Cascade)
+  inviterId  String
+  inviter    User             @relation("InvitationSender", fields: [inviterId], references: [id])
+  status     InvitationStatus @default(PENDING)
+  message    String?
+  createdAt  DateTime         @default(now())
+}
+
+model Task {
+  id                 String        @id @default(cuid())
+  teamId             String
+  team               Team          @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  title              String
+  description        String
+  status             TaskStatus    @default(TODO)
+  priority           TaskPriority  @default(MEDIUM)
+  assignedToId       String?
+  assignedTo         User?         @relation("TaskAssignee", fields: [assignedToId], references: [id])
+  createdById        String
+  createdBy          User          @relation("TaskCreator", fields: [createdById], references: [id])
+  dueDate            DateTime?
+  estimatedHours     Int           @default(4)
+  acceptanceCriteria String?       // JSON or text criteria checklist
+  blockerDescription String?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+
+  comments           TaskComment[]
+  deliverables       Deliverable[]
+  contributionEvents ContributionEvent[]
+}
+
+model TaskComment {
+  id        String   @id @default(cuid())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  comment   String
+  createdAt DateTime @default(now())
+}
+
+model Deliverable {
+  id             String            @id @default(cuid())
+  taskId         String
+  task           Task              @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  teamId         String
+  team           Team              @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  submittedById  String
+  submittedBy    User              @relation("DeliverableSubmitter", fields: [submittedById], references: [id])
+  title          String
+  fileUrlOrLink  String
+  notes          String?
+  status         DeliverableStatus @default(SUBMITTED)
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  reviews        Review[]
+}
+
+model Review {
+  id            String      @id @default(cuid())
+  deliverableId String
+  deliverable   Deliverable @relation(fields: [deliverableId], references: [id], onDelete: Cascade)
+  reviewerId    String
+  reviewer      User        @relation("ReviewAuthor", fields: [reviewerId], references: [id])
+  decision      String      // "APPROVED", "CHANGES_REQUESTED"
+  comments      String
+  score         Int?        // 1 to 10
+  createdAt     DateTime    @default(now())
+}
+
+model ContributionEvent {
+  id         String   @id @default(cuid())
+  teamId     String
+  team       Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  taskId     String?
+  task       Task?    @relation(fields: [taskId], references: [id])
+  eventType  String   // TASK_CREATED, TASK_COMPLETED, DELIVERABLE_SUBMITTED, REVIEW_COMPLETED, CODE_COMMITTED, PEER_HELP
+  title      String
+  details    String?
+  weight     Float    @default(1.0)
+  verified   Boolean  @default(true)
+  timestamp  DateTime @default(now())
+}
+
+model PeerFeedback {
+  id           String   @id @default(cuid())
+  teamId       String
+  team         Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  fromUserId   String
+  fromUser     User     @relation("FeedbackSender", fields: [fromUserId], references: [id])
+  toUserId     String
+  toUser       User     @relation("FeedbackReceiver", fields: [toUserId], references: [id])
+  rating       Int      @default(5) // 1 to 5
+  strengths    String
+  improvements String
+  anonymous    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
+
+model ContributionDispute {
+  id                  String        @id @default(cuid())
+  teamId              String
+  team                Team          @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  reportedById        String
+  reportedBy          User          @relation("DisputeReporter", fields: [reportedById], references: [id])
+  title               String
+  reason              String
+  requestedCorrection String
+  status              DisputeStatus @default(OPEN)
+  resolutionNotes     String?
+  resolvedById        String?
+  resolvedBy          User?         @relation("DisputeResolver", fields: [resolvedById], references: [id])
+  createdAt           DateTime      @default(now())
+  resolvedAt          DateTime?
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+  action     String   // e.g. "USER_LOGIN", "PROJECT_CREATED", "TASK_STATUS_CHANGED", "DISPUTE_SUBMITTED"
+  entityType String
+  entityId   String?
+  details    String?
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  message   String
+  link      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
