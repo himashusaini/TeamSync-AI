@@ -2471,6 +2471,25 @@
       "createdAt": "2026-10-02T14:30:00.000Z"
     }
   ],
-  "auditLogs": [],
+  "auditLogs": [
+    {
+      "id": "aud-1792950628921",
+      "userId": "usr-student-1",
+      "action": "USER_LOGIN",
+      "entityType": "User",
+      "entityId": "usr-student-1",
+      "details": "User logged in from web client",
+      "createdAt": "2026-10-25T17:50:28.922Z"
+    },
+    {
+      "id": "aud-1793095094419",
+      "userId": "usr-student-1",
+      "action": "USER_LOGIN",
+      "entityType": "User",
+      "entityId": "usr-student-1",
+      "details": "User logged in from web client",
+      "createdAt": "2026-10-27T09:58:14.419Z"
+    }
+  ],
   "notifications": []
 }
