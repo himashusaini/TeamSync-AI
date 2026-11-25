@@ -55,6 +55,7 @@ async function main() {
       email: 'alex.chen@university.edu',
       name: 'Alex Chen',
       role: 'STUDENT',
+      avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
       department: 'Computer Science',
       year: 4,
       interests: ['Web Development', 'AI/ML', 'Distributed Systems'],
@@ -68,6 +69,7 @@ async function main() {
       email: 'sarah.miller@university.edu',
       name: 'Sarah Miller',
       role: 'STUDENT',
+      avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
       department: 'Data Science',
       year: 3,
       interests: ['AI/ML', 'Predictive Modeling', 'Data Visualization'],
@@ -81,6 +83,7 @@ async function main() {
       email: 'marcus.vance@university.edu',
       name: 'Marcus Vance',
       role: 'STUDENT',
+      avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
       department: 'Information Technology',
       year: 3,
       interests: ['UI/UX Design', 'Frontend Development', 'Accessibility'],
@@ -94,6 +97,7 @@ async function main() {
       email: 'priya.sharma@university.edu',
       name: 'Priya Sharma',
       role: 'STUDENT',
+      avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150',
       department: 'Computer Science',
       year: 4,
       interests: ['Cloud Infrastructure', 'DevOps', 'Cybersecurity'],
@@ -107,6 +111,7 @@ async function main() {
       email: 'david.kim@university.edu',
       name: 'David Kim',
       role: 'STUDENT',
+      avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150',
       department: 'Software Engineering',
       year: 2,
       interests: ['Web Development', 'Testing', 'Backend'],
@@ -120,12 +125,13 @@ async function main() {
   for (const s of studentData) {
     const user = await prisma.user.upsert({
       where: { email: s.email },
-      update: { name: s.name, role: s.role, passwordHash },
+      update: { name: s.name, role: s.role, avatarUrl: s.avatarUrl, passwordHash },
       create: {
         id: s.id,
         email: s.email,
         name: s.name,
         role: s.role,
+        avatarUrl: s.avatarUrl,
         passwordHash,
       },
     });
@@ -161,6 +167,8 @@ async function main() {
       });
     }
 
+    // Clean up existing slots for idempotency
+    await prisma.availabilitySlot.deleteMany({ where: { userId: user.id } });
     for (const slot of s.avail) {
       await prisma.availabilitySlot.create({
         data: {
@@ -173,11 +181,9 @@ async function main() {
     }
   }
 
-  // 3. Create Sample Project & Team
-  const project = await prisma.project.upsert({
-    where: { id: 'proj-teamsync' },
-    update: {},
-    create: {
+  // 3. Create Sample Projects
+  const sampleProjects = [
+    {
       id: 'proj-teamsync',
       title: 'TeamSync AI: Intelligent Student Collaboration Platform',
       description: 'Explainable AI-driven team formation platform with balanced workload management and verified contribution analytics.',
@@ -194,21 +200,201 @@ async function main() {
         { id: 'm3', title: 'Kanban Workspace & Deliverables Review', completed: true },
         { id: 'm4', title: 'Contribution Intelligence & Final Evaluation', completed: false },
       ]),
+      requirements: [
+        { skillId: 'sk-nextjs', minProficiency: 4, isRequired: true, roleName: 'Frontend Lead' },
+        { skillId: 'sk-postgres', minProficiency: 3, isRequired: true, roleName: 'Backend & DB Lead' },
+        { skillId: 'sk-figma', minProficiency: 3, isRequired: true, roleName: 'UI/UX Designer' },
+        { skillId: 'sk-docker', minProficiency: 2, isRequired: false, roleName: 'DevOps Specialist' },
+      ],
     },
-  });
+    {
+      id: 'proj-healthpulse',
+      title: 'HealthPulse: Predictive Patient Health Monitor',
+      description: 'IoT and neural classification system for early hospital readmission risk detection and telemetry.',
+      category: 'AI/ML',
+      expectedTeamSize: 4,
+      weeklyMeetingHours: 4,
+      workloadHours: 75,
+      deadline: new Date('2026-11-15T00:00:00Z'),
+      status: 'RECRUITING',
+      ownerId: 'usr-student-2',
+      milestones: JSON.stringify([
+        { id: 'm1', title: 'Clinical Dataset Ingestion', completed: true },
+        { id: 'm2', title: 'Transformer Model Pipeline', completed: false },
+      ]),
+      requirements: [
+        { skillId: 'sk-python', minProficiency: 4, isRequired: true, roleName: 'ML Engineer' },
+        { skillId: 'sk-pytorch', minProficiency: 4, isRequired: true, roleName: 'Data Scientist' },
+        { skillId: 'sk-fastapi', minProficiency: 3, isRequired: true, roleName: 'Backend Lead' },
+        { skillId: 'sk-react', minProficiency: 3, isRequired: false, roleName: 'Frontend Developer' },
+      ],
+    },
+  ];
 
+  for (const pData of sampleProjects) {
+    const { requirements, ...projFields } = pData;
+    await prisma.project.upsert({
+      where: { id: projFields.id },
+      update: projFields,
+      create: projFields,
+    });
+
+    for (const req of requirements) {
+      const existing = await prisma.projectRequirement.findFirst({
+        where: { projectId: projFields.id, skillId: req.skillId },
+      });
+      if (existing) {
+        await prisma.projectRequirement.update({
+          where: { id: existing.id },
+          data: req,
+        });
+      } else {
+        await prisma.projectRequirement.create({
+          data: { projectId: projFields.id, ...req },
+        });
+      }
+    }
+  }
+
+  // 4. Create Sample Team & Memberships
   const team = await prisma.team.upsert({
     where: { id: 'team-alpha' },
-    update: {},
+    update: { name: 'Alpha Core Innovators', projectId: 'proj-teamsync', status: 'ACTIVE' },
     create: {
       id: 'team-alpha',
       name: 'Alpha Core Innovators',
-      projectId: project.id,
+      projectId: 'proj-teamsync',
       status: 'ACTIVE',
     },
   });
 
-  console.log('✅ Seeded demo project and team.');
+  const memberships = [
+    { userId: 'usr-student-1', role: 'PROJECT_LEAD', joinedAt: new Date('2026-08-25T10:00:00.000Z') },
+    { userId: 'usr-student-3', role: 'UI_UX_DESIGNER', joinedAt: new Date('2026-08-26T11:00:00.000Z') },
+    { userId: 'usr-student-4', role: 'DEVOPS_ENGINEER', joinedAt: new Date('2026-08-26T14:30:00.000Z') },
+    { userId: 'usr-student-5', role: 'BACKEND_DEVELOPER', joinedAt: new Date('2026-08-28T09:15:00.000Z') },
+  ];
+
+  for (const m of memberships) {
+    await prisma.teamMembership.upsert({
+      where: { teamId_userId: { teamId: team.id, userId: m.userId } },
+      update: { role: m.role, joinedAt: m.joinedAt },
+      create: { teamId: team.id, userId: m.userId, role: m.role, joinedAt: m.joinedAt },
+    });
+  }
+
+  // 5. Create Tasks
+  const tasks = [
+    {
+      id: 'task-101',
+      teamId: team.id,
+      title: 'Design explainable matching scoring formula & API endpoints',
+      description: 'Implement multi-factor weighted equation with weight validation.',
+      status: 'COMPLETED',
+      priority: 'HIGH',
+      assignedToId: 'usr-student-1',
+      createdById: 'usr-student-1',
+      dueDate: new Date('2026-09-18T00:00:00.000Z'),
+      estimatedHours: 12,
+      acceptanceCriteria: 'Unit tests passing for all 5 sub-scores; weights summing to 1.0; deterministic output.',
+    },
+    {
+      id: 'task-102',
+      teamId: team.id,
+      title: 'Build Interactive What-If Team Simulator UI',
+      description: 'Real-time weight adjustment sliders and team candidate radar evaluation.',
+      status: 'COMPLETED',
+      priority: 'HIGH',
+      assignedToId: 'usr-student-3',
+      createdById: 'usr-student-1',
+      dueDate: new Date('2026-09-25T00:00:00.000Z'),
+      estimatedHours: 10,
+      acceptanceCriteria: 'Mobile responsive, sub-100ms render, clean SVG charts.',
+    },
+    {
+      id: 'task-103',
+      teamId: team.id,
+      title: 'Implement Deliverable Submission & Independent Review Workflow',
+      description: 'Secure artifact uploads and strict peer approval anti-tamper guardrails.',
+      status: 'IN_REVIEW',
+      priority: 'MEDIUM',
+      assignedToId: 'usr-student-5',
+      createdById: 'usr-student-1',
+      dueDate: new Date('2026-10-02T00:00:00.000Z'),
+      estimatedHours: 8,
+      acceptanceCriteria: 'Prevent author self-approval; persist review comments and audit events.',
+    },
+  ];
+
+  for (const t of tasks) {
+    await prisma.task.upsert({
+      where: { id: t.id },
+      update: t,
+      create: t,
+    });
+  }
+
+  // 6. Create Deliverables & Reviews
+  const deliverables = [
+    {
+      id: 'del-1',
+      taskId: 'task-101',
+      teamId: team.id,
+      submittedById: 'usr-student-1',
+      title: 'PR #14: Explainable Recommendation Engine Implementation',
+      fileUrlOrLink: 'https://github.com/teamsync-ai/core/pull/14',
+      notes: 'Includes unit tests in tests/matching.test.js covering all boundary conditions.',
+      status: 'APPROVED',
+    },
+    {
+      id: 'del-2',
+      taskId: 'task-102',
+      teamId: team.id,
+      submittedById: 'usr-student-3',
+      title: 'PR #21: What-If Simulator Frontend Component & Style System',
+      fileUrlOrLink: 'https://github.com/teamsync-ai/core/pull/21',
+      notes: 'Fully responsive UI tokens with zero external CSS library dependencies.',
+      status: 'APPROVED',
+    },
+  ];
+
+  for (const d of deliverables) {
+    await prisma.deliverable.upsert({
+      where: { id: d.id },
+      update: d,
+      create: d,
+    });
+  }
+
+  // Create Reviews
+  const reviews = [
+    {
+      id: 'rev-1',
+      deliverableId: 'del-1',
+      reviewerId: 'usr-student-4',
+      decision: 'APPROVED',
+      comments: 'Architecture adheres to multi-criteria specification. Clean boundary checks.',
+      score: 10,
+    },
+    {
+      id: 'rev-2',
+      deliverableId: 'del-2',
+      reviewerId: 'usr-student-1',
+      decision: 'APPROVED',
+      comments: 'Excellent responsiveness and accessible contrast ratios. Approved for merge.',
+      score: 9,
+    },
+  ];
+
+  for (const r of reviews) {
+    await prisma.review.upsert({
+      where: { id: r.id },
+      update: r,
+      create: r,
+    });
+  }
+
+  console.log('✅ Seeded demo projects, teams, tasks, deliverables, and reviews.');
   console.log('🎉 Seeding successfully completed!');
 }
 
