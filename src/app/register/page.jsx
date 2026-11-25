@@ -4,13 +4,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   UserPlus,
-  Sparkles,
   Lock,
   Mail,
   User,
-  GraduationCap,
+  Compass,
   AlertCircle,
-  ArrowRight,
+  Building,
+  GraduationCap,
 } from 'lucide-react';
 
 export default function RegisterPage() {
@@ -58,26 +58,27 @@ export default function RegisterPage() {
 
   return (
     <div style={{ padding: '60px 0 100px 0', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
-      <div className="container" style={{ maxWidth: '480px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+      <div className="container" style={{ maxWidth: '460px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
           <div style={{
-            width: '48px',
-            height: '48px',
-            borderRadius: '14px',
-            background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)',
+            width: '44px',
+            height: '44px',
+            borderRadius: '11px',
+            backgroundColor: 'var(--primary)',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#fff',
-            marginBottom: '14px',
+            marginBottom: '12px',
+            boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)',
           }}>
-            <Sparkles size={24} />
+            <Compass size={22} />
           </div>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: '800', letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
-            Join TeamSync AI
+          <h1 style={{ fontSize: '1.65rem', fontWeight: '800', letterSpacing: '-0.025em', color: 'var(--text-primary)' }}>
+            Create student profile
           </h1>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
-            Build balanced capstone teams with explainable matching
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
+            Find compatible teammates and join capstone projects
           </p>
         </div>
 
@@ -86,81 +87,80 @@ export default function RegisterPage() {
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            padding: '12px 14px',
+            padding: '10px 14px',
             backgroundColor: 'var(--danger-bg)',
             color: 'var(--danger)',
             border: '1px solid var(--danger-border)',
             borderRadius: 'var(--radius-md)',
-            marginBottom: '20px',
+            marginBottom: '18px',
             fontSize: '0.85rem',
           }}>
-            <AlertCircle size={16} />
+            <AlertCircle size={15} />
             <span>{error}</span>
           </div>
         )}
 
-        <div className="card" style={{ padding: '28px' }}>
-          <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="card" style={{ padding: '26px' }}>
+          <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
-                Full Name *
+              <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
+                Full Name
               </label>
               <div style={{ position: 'relative' }}>
-                <User size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <User size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                 <input
                   type="text"
                   required
                   placeholder="e.g. Jordan Taylor"
                   value={name}
                   onChange={e => setName(e.target.value)}
-                  style={{ width: '100%', padding: '10px 12px 10px 36px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
+                  style={{ paddingLeft: '36px' }}
                 />
               </div>
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
-                University Email Address *
+              <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
+                University Email
               </label>
               <div style={{ position: 'relative' }}>
-                <Mail size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <Mail size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                 <input
                   type="email"
                   required
                   placeholder="name@university.edu"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
-                  style={{ width: '100%', padding: '10px 12px 10px 36px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
+                  style={{ paddingLeft: '36px' }}
                 />
               </div>
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
-                Password (min 6 characters) *
+              <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
+                Password (min 6 characters)
               </label>
               <div style={{ position: 'relative' }}>
-                <Lock size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <Lock size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                 <input
                   type="password"
                   required
                   placeholder="••••••••"
                   value={password}
                   onChange={e => setPassword(e.target.value)}
-                  style={{ width: '100%', padding: '10px 12px 10px 36px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
+                  style={{ paddingLeft: '36px' }}
                 />
               </div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
                   Department
                 </label>
                 <select
                   value={department}
                   onChange={e => setDepartment(e.target.value)}
-                  style={{ width: '100%', padding: '10px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
                 >
                   <option value="Computer Science">Computer Science</option>
                   <option value="Data Science">Data Science</option>
@@ -171,13 +171,12 @@ export default function RegisterPage() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
                   Academic Year
                 </label>
                 <select
                   value={academicYear}
                   onChange={e => setAcademicYear(Number(e.target.value))}
-                  style={{ width: '100%', padding: '10px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
                 >
                   <option value="1">Year 1</option>
                   <option value="2">Year 2</option>
@@ -191,16 +190,16 @@ export default function RegisterPage() {
               type="submit"
               disabled={loading}
               className="btn btn-primary"
-              style={{ width: '100%', padding: '12px', marginTop: '8px' }}
+              style={{ width: '100%', padding: '10px', marginTop: '6px' }}
             >
-              <UserPlus size={16} />
-              <span>{loading ? 'Creating Account...' : 'Complete Registration'}</span>
+              <UserPlus size={15} />
+              <span>{loading ? 'Creating profile...' : 'Create Account'}</span>
             </button>
           </form>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-          Already have an account?{' '}
+        <div style={{ textAlign: 'center', marginTop: '18px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+          Already registered?{' '}
           <a href="/login" style={{ color: 'var(--primary)', fontWeight: '600' }}>
             Sign in
           </a>

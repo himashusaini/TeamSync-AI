@@ -3,9 +3,9 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 export const metadata = {
-  title: 'TeamSync AI — Student Project Team Formation & Contribution Intelligence',
-  description: 'Build Better Teams. Create Better Projects. Explainable algorithmic team formation, skill-gap analysis, Kanban workspace, and evidence-backed contribution analytics for academic projects.',
-  keywords: 'team formation, capstone project, student collaboration, skill matching, contribution intelligence, academic teams',
+  title: 'TeamSync — Collaborative Student Project & Capstone Management',
+  description: 'Team formation, skill-based matching, Kanban project workspaces, and peer review tracking for university capstone cohorts.',
+  keywords: 'team formation, capstone project, student collaboration, skill matching, peer reviews, academic projects',
 };
 
 export default function RootLayout({ children }) {

@@ -4,13 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   LogIn,
-  Sparkles,
   Lock,
   Mail,
   AlertCircle,
+  Compass,
   ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
+  UserCheck,
 } from 'lucide-react';
 
 export default function LoginPage() {
@@ -34,7 +33,7 @@ export default function LoginPage() {
 
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error || 'Login failed');
+        setError(data.error || 'Invalid email or password');
         setLoading(false);
         return;
       }
@@ -54,26 +53,27 @@ export default function LoginPage() {
 
   return (
     <div style={{ padding: '60px 0 100px 0', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
-      <div className="container" style={{ maxWidth: '440px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+      <div className="container" style={{ maxWidth: '420px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
           <div style={{
-            width: '48px',
-            height: '48px',
-            borderRadius: '14px',
-            background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)',
+            width: '44px',
+            height: '44px',
+            borderRadius: '11px',
+            backgroundColor: 'var(--primary)',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#fff',
-            marginBottom: '14px',
+            marginBottom: '12px',
+            boxShadow: '0 4px 12px rgba(37, 99, 235, 0.25)',
           }}>
-            <Sparkles size={24} />
+            <Compass size={22} />
           </div>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: '800', letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
-            Welcome to TeamSync AI
+          <h1 style={{ fontSize: '1.65rem', fontWeight: '800', letterSpacing: '-0.025em', color: 'var(--text-primary)' }}>
+            Welcome back
           </h1>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
-            Sign in to access your capstone team workspace
+          <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
+            Sign in to your capstone project workspace
           </p>
         </div>
 
@@ -82,52 +82,55 @@ export default function LoginPage() {
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            padding: '12px 14px',
+            padding: '10px 14px',
             backgroundColor: 'var(--danger-bg)',
             color: 'var(--danger)',
             border: '1px solid var(--danger-border)',
             borderRadius: 'var(--radius-md)',
-            marginBottom: '20px',
+            marginBottom: '18px',
             fontSize: '0.85rem',
           }}>
-            <AlertCircle size={16} />
+            <AlertCircle size={15} />
             <span>{error}</span>
           </div>
         )}
 
         {/* Login Form Card */}
-        <div className="card" style={{ padding: '28px' }}>
-          <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="card" style={{ padding: '26px' }}>
+          <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
-                University Email Address
+              <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', marginBottom: '5px', color: 'var(--text-primary)' }}>
+                Email address
               </label>
               <div style={{ position: 'relative' }}>
-                <Mail size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <Mail size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                 <input
                   type="email"
                   required
                   placeholder="student@university.edu"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
-                  style={{ width: '100%', padding: '10px 12px 10px 36px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
+                  style={{ paddingLeft: '36px' }}
                 />
               </div>
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', marginBottom: '6px' }}>
-                Password
-              </label>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                <label style={{ fontSize: '0.825rem', fontWeight: '600', color: 'var(--text-primary)' }}>
+                  Password
+                </label>
+                <span style={{ fontSize: '0.75rem', color: 'var(--primary)', cursor: 'pointer' }}>Forgot password?</span>
+              </div>
               <div style={{ position: 'relative' }}>
-                <Lock size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <Lock size={15} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                 <input
                   type="password"
                   required
                   placeholder="••••••••"
                   value={password}
                   onChange={e => setPassword(e.target.value)}
-                  style={{ width: '100%', padding: '10px 12px 10px 36px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-medium)' }}
+                  style={{ paddingLeft: '36px' }}
                 />
               </div>
             </div>
@@ -136,51 +139,54 @@ export default function LoginPage() {
               type="submit"
               disabled={loading}
               className="btn btn-primary"
-              style={{ width: '100%', padding: '12px', marginTop: '6px' }}
+              style={{ width: '100%', padding: '10px', marginTop: '4px' }}
             >
-              <LogIn size={16} />
-              <span>{loading ? 'Authenticating...' : 'Sign In'}</span>
+              <LogIn size={15} />
+              <span>{loading ? 'Signing in...' : 'Sign In'}</span>
             </button>
           </form>
 
           {/* Quick Demo Accounts Selection */}
-          <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '18px', marginTop: '20px' }}>
-            <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '10px' }}>
-              Quick Demo Personas for Evaluation
+          <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '16px', marginTop: '18px' }}>
+            <div style={{ fontSize: '0.725rem', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '8px' }}>
+              Quick Evaluation Profiles
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <button
                 type="button"
                 onClick={() => setDemoAccount('alex.chen@university.edu')}
                 className="btn btn-secondary"
-                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.75rem' }}
+                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.775rem' }}
               >
+                <UserCheck size={14} color="var(--primary)" />
                 <span>Alex Chen — Project Lead & Full-Stack</span>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('sarah.miller@university.edu')}
                 className="btn btn-secondary"
-                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.75rem' }}
+                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.775rem' }}
               >
-                <span>Sarah Miller — AI/ML Engineer</span>
+                <UserCheck size={14} color="var(--primary)" />
+                <span>Sarah Miller — Data Science & Modeling</span>
               </button>
               <button
                 type="button"
                 onClick={() => setDemoAccount('priya.sharma@university.edu')}
                 className="btn btn-secondary"
-                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.75rem' }}
+                style={{ justifyContent: 'flex-start', padding: '6px 10px', fontSize: '0.775rem' }}
               >
-                <span>Priya Sharma — DevOps & Systems</span>
+                <UserCheck size={14} color="var(--primary)" />
+                <span>Priya Sharma — Cloud & Infrastructure</span>
               </button>
             </div>
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+        <div style={{ textAlign: 'center', marginTop: '18px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
           Don&apos;t have an account?{' '}
           <a href="/register" style={{ color: 'var(--primary)', fontWeight: '600' }}>
-            Register as Student
+            Sign up here
           </a>
         </div>
       </div>

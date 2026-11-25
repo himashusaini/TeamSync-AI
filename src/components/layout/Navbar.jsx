@@ -1,9 +1,18 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/navigation';
 import { useRouter, usePathname } from 'next/navigation';
-import { Users, Layers, Shield, Sparkles, LogIn, UserPlus, LogOut, User, FolderKanban, Sliders } from 'lucide-react';
+import {
+  Users,
+  FolderKanban,
+  SlidersHorizontal,
+  LayoutDashboard,
+  LogIn,
+  UserPlus,
+  LogOut,
+  User,
+  Compass,
+} from 'lucide-react';
 
 export default function Navbar() {
   const router = useRouter();
@@ -39,128 +48,142 @@ export default function Navbar() {
   return (
     <header style={{
       borderBottom: '1px solid var(--border-light)',
-      backgroundColor: 'var(--bg-card)',
+      backgroundColor: 'rgba(255, 255, 255, 0.95)',
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      backdropFilter: 'blur(8px)',
+      backdropFilter: 'blur(10px)',
     }}>
       <div className="container" style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: '70px',
+        height: '64px',
       }}>
         {/* Brand Logo & Name */}
-        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <div style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%)',
+            width: '34px',
+            height: '34px',
+            borderRadius: '9px',
+            backgroundColor: 'var(--primary)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#fff',
-            boxShadow: 'var(--shadow-glow)',
+            boxShadow: '0 2px 6px rgba(37, 99, 235, 0.3)',
           }}>
-            <Sparkles size={22} />
+            <Compass size={20} />
           </div>
-          <div>
-            <div style={{ fontWeight: '700', fontSize: '1.25rem', letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>
-              TeamSync <span style={{ color: 'var(--accent)' }}>AI</span>
-            </div>
-            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: '500' }}>
-              Build Better Teams. Create Better Projects.
-            </div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+            <span style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+              TeamSync
+            </span>
+            <span style={{
+              fontSize: '0.65rem',
+              fontWeight: '700',
+              padding: '1px 6px',
+              borderRadius: '4px',
+              backgroundColor: 'var(--bg-subtle)',
+              border: '1px solid var(--border-light)',
+              color: 'var(--text-muted)',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+            }}>
+              Academic
+            </span>
           </div>
         </a>
 
         {/* Navigation Links */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
           <a
             href="/projects"
             style={{
-              fontSize: '0.925rem',
-              fontWeight: pathname.startsWith('/projects') ? '600' : '500',
-              color: pathname.startsWith('/projects') ? 'var(--primary)' : 'var(--text-secondary)',
+              fontSize: '0.875rem',
+              fontWeight: pathname.startsWith('/projects') && !pathname.includes('/matches') ? '600' : '500',
+              color: pathname.startsWith('/projects') && !pathname.includes('/matches') ? 'var(--primary)' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
+              transition: 'color var(--transition-fast)',
             }}
           >
-            <FolderKanban size={17} />
+            <FolderKanban size={16} />
             Projects
           </a>
 
           <a
             href="/projects/proj-teamsync/matches"
             style={{
-              fontSize: '0.925rem',
+              fontSize: '0.875rem',
               fontWeight: pathname.includes('/matches') ? '600' : '500',
               color: pathname.includes('/matches') ? 'var(--primary)' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
+              transition: 'color var(--transition-fast)',
             }}
           >
-            <Sliders size={17} />
-            Team Simulator
+            <SlidersHorizontal size={16} />
+            Match Simulator
           </a>
 
           <a
             href="/teams/team-alpha"
             style={{
-              fontSize: '0.925rem',
+              fontSize: '0.875rem',
               fontWeight: pathname.startsWith('/teams') ? '600' : '500',
               color: pathname.startsWith('/teams') ? 'var(--primary)' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
+              transition: 'color var(--transition-fast)',
             }}
           >
-            <Users size={17} />
-            Workspace
+            <Users size={16} />
+            Team Workspace
           </a>
 
           {user && (
             <a
               href="/dashboard"
               style={{
-                fontSize: '0.925rem',
+                fontSize: '0.875rem',
                 fontWeight: pathname === '/dashboard' ? '600' : '500',
                 color: pathname === '/dashboard' ? 'var(--primary)' : 'var(--text-secondary)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
+                transition: 'color var(--transition-fast)',
               }}
             >
-              <Layers size={17} />
+              <LayoutDashboard size={16} />
               Dashboard
             </a>
           )}
         </nav>
 
         {/* Auth Actions / Profile Menu */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           {!loading && user ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <a
                 href="/profile"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
-                  padding: '6px 12px',
+                  padding: '5px 11px',
                   borderRadius: 'var(--radius-md)',
                   backgroundColor: 'var(--bg-subtle)',
                   border: '1px solid var(--border-light)',
                   color: 'var(--text-primary)',
                   fontWeight: '500',
-                  fontSize: '0.875rem',
+                  fontSize: '0.85rem',
                 }}
               >
-                <User size={16} color="var(--primary)" />
+                <User size={15} color="var(--primary)" />
                 <span>{user.name.split(' ')[0]}</span>
                 <span className="badge badge-primary" style={{ fontSize: '0.65rem' }}>
                   {user.role}
@@ -170,22 +193,22 @@ export default function Navbar() {
               <button
                 onClick={handleLogout}
                 className="btn btn-secondary"
-                style={{ padding: '8px 14px', fontSize: '0.85rem' }}
+                style={{ padding: '6px 12px', fontSize: '0.825rem' }}
                 title="Log Out"
               >
-                <LogOut size={15} />
+                <LogOut size={14} />
                 <span>Sign Out</span>
               </button>
             </div>
           ) : !loading ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <a href="/login" className="btn btn-secondary" style={{ padding: '8px 16px', fontSize: '0.875rem' }}>
-                <LogIn size={16} />
-                <span>Log In</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <a href="/login" className="btn btn-secondary" style={{ padding: '7px 14px', fontSize: '0.85rem' }}>
+                <LogIn size={15} />
+                <span>Sign In</span>
               </a>
-              <a href="/register" className="btn btn-primary" style={{ padding: '8px 18px', fontSize: '0.875rem' }}>
-                <UserPlus size={16} />
-                <span>Get Started</span>
+              <a href="/register" className="btn btn-primary" style={{ padding: '7px 16px', fontSize: '0.85rem' }}>
+                <UserPlus size={15} />
+                <span>Join Now</span>
               </a>
             </div>
           ) : null}
